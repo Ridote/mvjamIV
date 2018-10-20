@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://entities/projectiles/Baguette.gd" type="Script" id=1]
+[ext_resource path="res://graphics/sprites/bread.png" type="Texture" id=2]
+
+[node name="Baguette" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+input_pickable = false
+collision_layer = 8
+collision_mask = 18
+collision/safe_margin = 0.08
+motion/sync_to_physics = false
+_sections_unfolded = [ "Collision" ]
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -54, -2, -54, 7, -35, 12, 6, 13, 47, 5, 54, -3, 49, -8, 36, -14, -45 )
+

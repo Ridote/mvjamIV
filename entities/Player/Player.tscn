@@ -1,0 +1,168 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://entities/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://graphics/sprites/airship.png" type="Texture" id=2]
+[ext_resource path="res://graphics/textures/fire.png" type="Texture" id=3]
+
+[sub_resource type="Curve" id=1]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0.0072 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+
+flags = 4
+width = 128
+curve = SubResource( 1 )
+_sections_unfolded = [ "curve" ]
+
+[sub_resource type="ParticlesMaterial" id=3]
+
+render_priority = 0
+trail_divisor = 10
+emission_shape = 2
+emission_box_extents = Vector3( 40, 1, 1 )
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 0.0
+flatness = 0.0
+gravity = Vector3( 0, 250, 0 )
+initial_velocity = 0.0
+initial_velocity_random = 0.0
+angular_velocity = -9.96107e-009
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 2.0
+scale_random = 0.0
+scale_curve = SubResource( 2 )
+color = Color( 0.898039, 0, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Gravity", "Initial Velocity", "scale_curve" ]
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 1 )
+speed = 20
+
+[node name="rigid" type="RigidBody2D" parent="."]
+rotation = 1.5708
+input_pickable = false
+collision_layer = 1
+collision_mask = 50
+mode = 2
+mass = 1.0
+physics_material_override = null
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+_sections_unfolded = [ "Angular", "Collision", "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="rigid"]
+texture = ExtResource( 2 )
+region_rect = Rect2( 16, 16, 16, 16 )
+_sections_unfolded = [ "Region", "texture" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rigid"]
+build_mode = 0
+polygon = PoolVector2Array( -44, 45, -38.5922, 15.8705, -12, -12, -18, -22, 0, -45, 18, -22, 12, -12, 38.7849, 16.1625, 44, 45 )
+
+[node name="PositionTop" type="Position2D" parent="rigid"]
+editor/display_folded = true
+position = Vector2( -195, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="VisibilityTop" type="VisibilityNotifier2D" parent="rigid/PositionTop"]
+rect = Rect2( -10, -10, 20, 20 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PositionBottom" type="Position2D" parent="rigid"]
+editor/display_folded = true
+position = Vector2( 195, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="VisibilityBottom" type="VisibilityNotifier2D" parent="rigid/PositionBottom"]
+rect = Rect2( -10, -10, 20, 20 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PositionRight" type="Position2D" parent="rigid"]
+editor/display_folded = true
+position = Vector2( 0, -145 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="VisibilityRight" type="VisibilityNotifier2D" parent="rigid/PositionRight"]
+rect = Rect2( -10, -10, 20, 20 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PositionLeft" type="Position2D" parent="rigid"]
+editor/display_folded = true
+position = Vector2( 0, 145 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="VisibilityLeft" type="VisibilityNotifier2D" parent="rigid/PositionLeft"]
+rect = Rect2( -10, -10, 20, 20 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Particles2D" type="Particles2D" parent="rigid"]
+position = Vector2( 2.27299e-006, 52 )
+emitting = true
+amount = 50
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = ExtResource( 3 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Material", "Process Material", "process_material" ]
+
+[node name="fire_rate" type="Timer" parent="."]
+process_mode = 1
+wait_time = 0.2
+one_shot = false
+autostart = false
+
+[connection signal="screen_entered" from="rigid/PositionTop/VisibilityTop" to="." method="_on_VisibilityTop_screen_entered"]
+[connection signal="screen_exited" from="rigid/PositionTop/VisibilityTop" to="." method="_on_VisibilityTop_screen_exited"]
+[connection signal="screen_entered" from="rigid/PositionBottom/VisibilityBottom" to="." method="_on_VisibilityBottom_screen_entered"]
+[connection signal="screen_exited" from="rigid/PositionBottom/VisibilityBottom" to="." method="_on_VisibilityBottom_screen_exited"]
+[connection signal="screen_entered" from="rigid/PositionRight/VisibilityRight" to="." method="_on_VisibilityRight_screen_entered"]
+[connection signal="screen_exited" from="rigid/PositionRight/VisibilityRight" to="." method="_on_VisibilityRight_screen_exited"]
+[connection signal="screen_entered" from="rigid/PositionLeft/VisibilityLeft" to="." method="_on_VisibilityLeft_screen_entered"]
+[connection signal="screen_exited" from="rigid/PositionLeft/VisibilityLeft" to="." method="_on_VisibilityLeft_screen_exited"]
+[connection signal="timeout" from="fire_rate" to="." method="_on_fire_rate_timeout"]
