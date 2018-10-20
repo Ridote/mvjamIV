@@ -49,7 +49,7 @@ angle_random = 0.0
 scale = 2.0
 scale_random = 0.0
 scale_curve = SubResource( 2 )
-color = Color( 0.898039, 0, 1, 1 )
+color = Color( 1, 0.501961, 0, 1 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -57,7 +57,7 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Gravity", "Initial Velocity", "scale_curve" ]
+_sections_unfolded = [ "Color", "Gravity", "Initial Velocity", "Trail", "scale_curve" ]
 
 [node name="Player" type="Node2D"]
 script = ExtResource( 1 )
@@ -149,7 +149,7 @@ texture = ExtResource( 3 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Material", "Process Material", "process_material" ]
+_sections_unfolded = [ "Process Material", "process_material" ]
 
 [node name="fire_rate" type="Timer" parent="."]
 process_mode = 1

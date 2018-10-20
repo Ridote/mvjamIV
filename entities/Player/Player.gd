@@ -2,6 +2,7 @@ extends Node2D
 
 var baguetteFactory = load("res://entities/projectiles/Baguette.tscn")
 var pantyFactory = load("res://entities/projectiles/Panty.tscn")
+var bulletsFactory = null
 
 export var speed = 20
 
@@ -19,6 +20,15 @@ var forceStop = [false, false, false, false]
 func _ready():
 	$rigid.apply_impulse(Vector2(0.0,0.0),Vector2(1.0,0.0))
 	$rigid.rotation = PI/2
+	setBunny()
+
+func setCat():
+	$rigid/Particles2D.process_material.color = Color(1,0.5,0,1)
+	bulletsFactory = baguetteFactory
+func setBunny():
+	$rigid/Particles2D.process_material.color = Color(1,0,1,1)
+	bulletsFactory = pantyFactory
+	
 
 func _process(delta):
 	read_input()
