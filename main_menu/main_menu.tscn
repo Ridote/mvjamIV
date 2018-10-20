@@ -1,0 +1,146 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://main_menu/main_menu.gd" type="Script" id=1]
+[ext_resource path="res://graphics/backgrounds/menu.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Minecraft.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 48
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="MainMenu" type="CanvasLayer"]
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Theme", "theme" ]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PanelContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1273.0
+margin_bottom = 793.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/NinePatchRect"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/NinePatchRect/VBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1266.0
+margin_bottom = 391.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Title" type="Label" parent="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 146.0
+margin_right = 1266.0
+margin_bottom = 245.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 5
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Title
+"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "custom_fonts", "custom_fonts/font" ]
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/NinePatchRect/VBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 395.0
+margin_right = 1266.0
+margin_bottom = 786.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Start" type="Button" parent="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 612.0
+margin_top = 185.0
+margin_right = 653.0
+margin_bottom = 205.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Start"
+flat = false
+align = 1
+
+[connection signal="pressed" from="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2/Start" to="." method="_on_Start_pressed"]

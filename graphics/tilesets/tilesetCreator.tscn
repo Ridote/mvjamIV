@@ -1,0 +1,1163 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://graphics/tilesets/platformer.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="platformer0" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+region_rect = Rect2( 0, 0, 169, 169 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer0"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer0/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 16, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 1
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer1"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer1/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 32, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 2
+region_rect = Rect2( 32, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer2"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer2/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 48, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 3
+region_rect = Rect2( 48, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer3"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer3/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 64, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 4
+region_rect = Rect2( 64, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer4"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer4/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 80, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 5
+region_rect = Rect2( 80, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer5"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer5/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer6" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 96, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 6
+region_rect = Rect2( 96, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer6"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer6/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer7" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 112, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 7
+region_rect = Rect2( 112, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer7"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer7/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer8" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 128, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 8
+region_rect = Rect2( 128, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer8"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer8/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer9" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 144, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 9
+region_rect = Rect2( 144, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer9"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer9/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer10" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 160, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 10
+region_rect = Rect2( 160, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer10"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer10/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer11" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 176, 0 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 11
+region_rect = Rect2( 176, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer11"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer11/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer16" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 16
+region_rect = Rect2( 0, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer16"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer16/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer17" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 16, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 17
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer17"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer17/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer18" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 32, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 18
+region_rect = Rect2( 32, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer18"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer18/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer19" type="Sprite" parent="."]
+position = Vector2( 48, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 19
+region_rect = Rect2( 48, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer19"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer19/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer21" type="Sprite" parent="."]
+position = Vector2( 80, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 21
+region_rect = Rect2( 80, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer21"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer21/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer22" type="Sprite" parent="."]
+position = Vector2( 96, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 22
+region_rect = Rect2( 96, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer22"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer22/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer23" type="Sprite" parent="."]
+position = Vector2( 112, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 23
+region_rect = Rect2( 112, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer23"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer23/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer24" type="Sprite" parent="."]
+position = Vector2( 128, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 24
+region_rect = Rect2( 128, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer24"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer24/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer25" type="Sprite" parent="."]
+position = Vector2( 144, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 25
+region_rect = Rect2( 144, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer25"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer25/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer27" type="Sprite" parent="."]
+position = Vector2( 176, 16 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 27
+region_rect = Rect2( 176, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer27"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer27/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer32" type="Sprite" parent="."]
+position = Vector2( 0, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 32
+region_rect = Rect2( 0, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer32"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer32/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer33" type="Sprite" parent="."]
+position = Vector2( 16, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 33
+region_rect = Rect2( 16, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer33"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer33/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer34" type="Sprite" parent="."]
+position = Vector2( 32, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 34
+region_rect = Rect2( 32, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer34"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer34/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer35" type="Sprite" parent="."]
+position = Vector2( 48, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 35
+region_rect = Rect2( 48, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer35"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer35/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer36" type="Sprite" parent="."]
+position = Vector2( 64, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 36
+region_rect = Rect2( 64, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer36"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer36/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer37" type="Sprite" parent="."]
+position = Vector2( 80, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 37
+region_rect = Rect2( 80, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer37"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer37/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer38" type="Sprite" parent="."]
+position = Vector2( 96, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 38
+region_rect = Rect2( 96, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer38"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer38/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer39" type="Sprite" parent="."]
+position = Vector2( 112, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 39
+region_rect = Rect2( 112, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer39"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer39/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer40" type="Sprite" parent="."]
+position = Vector2( 128, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 40
+region_rect = Rect2( 128, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer40"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer40/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer41" type="Sprite" parent="."]
+position = Vector2( 144, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 41
+region_rect = Rect2( 144, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer41"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer41/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer42" type="Sprite" parent="."]
+position = Vector2( 160, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 42
+region_rect = Rect2( 160, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer42"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer42/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer43" type="Sprite" parent="."]
+position = Vector2( 176, 32 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 43
+region_rect = Rect2( 176, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer43"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer43/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer48" type="Sprite" parent="."]
+position = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 48
+region_rect = Rect2( 0, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer48"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer48/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer49" type="Sprite" parent="."]
+position = Vector2( 16, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 49
+region_rect = Rect2( 16, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer49"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer49/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer50" type="Sprite" parent="."]
+position = Vector2( 32, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 50
+region_rect = Rect2( 32, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer50"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer50/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer51" type="Sprite" parent="."]
+position = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 51
+region_rect = Rect2( 48, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer51"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer51/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer52" type="Sprite" parent="."]
+position = Vector2( 64, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 52
+region_rect = Rect2( 64, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer52"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer52/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer54" type="Sprite" parent="."]
+position = Vector2( 96, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 54
+region_rect = Rect2( 96, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer54"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer54/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer55" type="Sprite" parent="."]
+position = Vector2( 112, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 55
+region_rect = Rect2( 112, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer55"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer55/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer56" type="Sprite" parent="."]
+position = Vector2( 128, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 56
+region_rect = Rect2( 128, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer56"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer56/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer57" type="Sprite" parent="."]
+position = Vector2( 144, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 57
+region_rect = Rect2( 144, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer57"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer57/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer58" type="Sprite" parent="."]
+position = Vector2( 160, 48 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 58
+region_rect = Rect2( 160, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer58"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer58/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer67" type="Sprite" parent="."]
+position = Vector2( 48, 64 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 67
+region_rect = Rect2( 48, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer67"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer67/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer73" type="Sprite" parent="."]
+position = Vector2( 144, 64 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 73
+region_rect = Rect2( 144, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer73"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer73/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer83" type="Sprite" parent="."]
+position = Vector2( 48, 80 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 83
+region_rect = Rect2( 48, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer83"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer83/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer89" type="Sprite" parent="."]
+position = Vector2( 144, 80 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 89
+region_rect = Rect2( 144, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer89"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer89/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer107" type="Sprite" parent="."]
+position = Vector2( 176, 96 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 107
+region_rect = Rect2( 176, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer107"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer107/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer108" type="Sprite" parent="."]
+position = Vector2( 192, 96 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 108
+region_rect = Rect2( 192, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer108"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer108/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer109" type="Sprite" parent="."]
+position = Vector2( 208, 96 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 109
+region_rect = Rect2( 208, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer109"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer109/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer120" type="Sprite" parent="."]
+position = Vector2( 128, 112 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 120
+region_rect = Rect2( 128, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer120"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer120/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer121" type="Sprite" parent="."]
+position = Vector2( 144, 112 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 121
+region_rect = Rect2( 144, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer121"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer121/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer122" type="Sprite" parent="."]
+position = Vector2( 160, 112 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 122
+region_rect = Rect2( 160, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer122"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer122/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="platformer123" type="Sprite" parent="."]
+position = Vector2( 176, 112 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 123
+region_rect = Rect2( 176, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer123"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer123/StaticBody2D"]
+position = Vector2( 0.225952, 0 )
+build_mode = 0
+polygon = PoolVector2Array( -8.22595, -8, 7.77405, -8, 7.77405, 8, -8.22595, 8 )
+_sections_unfolded = [ "polygon" ]
+
+[node name="platformer124" type="Sprite" parent="."]
+position = Vector2( 192, 112 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 124
+region_rect = Rect2( 192, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer124"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer124/StaticBody2D"]
+position = Vector2( 0.451874, 0 )
+build_mode = 0
+polygon = PoolVector2Array( -8.45187, -8, 7.54813, -8, 7.54813, 8, -8.45187, 8 )
+
+[node name="platformer125" type="Sprite" parent="."]
+position = Vector2( 208, 112 )
+texture = ExtResource( 1 )
+vframes = 9
+hframes = 16
+frame = 125
+region_rect = Rect2( 208, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="platformer125"]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+physics_material_override = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platformer125/StaticBody2D"]
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+

@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://entities/Players/Bunny/PlayerBunny.gd" type="Script" id=1]
+[ext_resource path="res://graphics/sprites/airship.png" type="Texture" id=2]
+
+[node name="PlayerBunny" type="Node2D"]
+script = ExtResource( 1 )
+speed = 2
+
+[node name="rigid" type="RigidBody2D" parent="."]
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 2
+mass = 1.0
+physics_material_override = null
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+_sections_unfolded = [ "Angular" ]
+
+[node name="Sprite" type="Sprite" parent="rigid"]
+texture = ExtResource( 2 )
+region_rect = Rect2( 16, 16, 16, 16 )
+_sections_unfolded = [ "Region", "texture" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rigid"]
+build_mode = 0
+polygon = PoolVector2Array( -44, 45, -38.5922, 15.8705, -12, -12, -18, -22, 0, -45, 18, -22, 12, -12, 38.7849, 16.1625, 44, 45 )
+

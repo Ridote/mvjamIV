@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://audio/around_the_world.ogg" type="AudioStream" id=1]
+[ext_resource path="res://graphics/backgrounds/clouds.png" type="Texture" id=2]
+
+[node name="Map1" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+stream_paused = false
+mix_target = 0
+bus = "Master"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 2, 2 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 512, 288 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
