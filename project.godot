@@ -54,6 +54,7 @@ ui_fire={
 2d_physics/layer_4="Baguette"
 2d_physics/layer_5="Floor/Wall"
 2d_physics/layer_6="SceneBoundaries"
+2d_physics/layer_7="Poop"
 
 [physics]
 
