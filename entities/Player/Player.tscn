@@ -61,7 +61,7 @@ _sections_unfolded = [ "Color", "Gravity", "Initial Velocity", "Trail", "scale_c
 
 [node name="Player" type="Node2D"]
 script = ExtResource( 1 )
-speed = 20
+speed = 1000
 
 [node name="rigid" type="RigidBody2D" parent="."]
 rotation = 1.5708

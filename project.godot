@@ -19,6 +19,10 @@ config/name="MVJAMIV"
 run/main_scene="res://entities/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+game_settings="*res://autoloads/game_settings.gd"
+
 [display]
 
 window/size/width=1280
@@ -33,7 +37,8 @@ enabled=PoolStringArray( "ch.fischspiele.tilesethelper" )
 
 ui_select={
 "deadzone": 0.5,
-"events": [  ]
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777238,"unicode":0,"echo":false,"script":null)
+ ]
 }
 ui_fire={
 "deadzone": 0.5,
