@@ -10,6 +10,7 @@ var points = 5
 
 var max_rand_time = 10
 var min_rand_time = 4
+var goUp = false
 
 func _ready():
 	$IsPoopTime.wait_time = abs(randf()*(max_rand_time+1+min_rand_time) - min_rand_time)+0.1
@@ -18,7 +19,14 @@ func _ready():
 	
 func _physics_process(delta):
 	if !dead:
-		var collision = $KinematicBody2D.move_and_collide(Vector2(1,0)*game_settings.flying_speed*delta)
+		if $KinematicBody2D.global_position.x - 20 <= BORDE_DE_ARRIBA_DE_LA_PANTALLA:
+			goUp = false
+		elif $KinematicBody2D.global_position.x + 20 >= game_settings.width:
+			goUp = true
+		if goUp:
+			$KinematicBody2D.move_and_collide(Vector2(1,-1)*game_settings.flying_speed*delta)
+		else:
+			$KinematicBody2D.move_and_collide(Vector2(1,1)*game_settings.flying_speed*delta)
 		return
 	$IsPoopTime.stop()
 	$KinematicBody2D.move_and_slide(Vector2(0,1)*falling_speed, Vector2(0,1))
@@ -62,6 +70,3 @@ func _on_IsPoopTime_timeout():
 	
 	$IsPoopTime.wait_time = abs(randf()*(max_rand_time+1+min_rand_time) - min_rand_time)+0.1
 	$IsPoopTime.start()
-
-func getDamage():
-	return game_settings.level * 5
