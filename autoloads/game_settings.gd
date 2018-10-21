@@ -32,7 +32,7 @@ func player2_score_emitter(val):
 	emit_signal("player2_score")
 
 func level_emitter(incr):
-	level += incr
+	level += 1
 	emit_signal("level")
 	
 
