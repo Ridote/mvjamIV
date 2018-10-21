@@ -12,6 +12,8 @@ export var player2_hp = 100 setget player2_hp_emitter
 export var player2_score = 0 setget player2_score_emitter
 export var level = 1 setget level_emitter
 
+var player1IsCat = 0
+var players = "Single"
 
 func player1_hp_emitter(val):
 	player1_hp = val

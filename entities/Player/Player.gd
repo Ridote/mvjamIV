@@ -30,7 +30,6 @@ var needsImpulse = false
 func _ready():
 	$rigid.apply_impulse(Vector2(0.0,0.0),Vector2(1.0,0.0))
 	$rigid.rotation = PI/2
-	setCat()
 
 func setCat():
 	$rigid/Particles2D.process_material.color = Color(1,0.5,0,1)
