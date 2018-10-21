@@ -40,10 +40,8 @@ func setBunny():
 	fire_rate = 0.1
 	bullet_power = 0.4
 	
-
-func _process(delta):
-	read_input()
-	if fire_ready && fire:
+func shoot():
+	if fire_ready:
 		fire_ready = false
 		$fire_rate.wait_time = fire_rate
 		$fire_rate.start()
@@ -51,6 +49,13 @@ func _process(delta):
 		get_tree().get_root().add_child(bullet) #must be here to avoid wrong warning messages
 		bullet.global_position = $rigid.global_position
 		bullet.global_position.x += 100
+	
+	
+func _process(delta):
+	read_input()
+	if fire:
+		shoot()
+	#Delete this
 	if Input.is_action_pressed("ui_select"):
 		setBunny()
 		
