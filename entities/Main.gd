@@ -32,14 +32,20 @@ func start_game():
 	else:
 		player = playerFactory.instance()
 		player.setBunny()
+		player.player = 0
 		player.position += Vector2(50,150)
 		get_tree().get_root().add_child(player)
 		
 		player = playerFactory.instance()
 		player.setCat()
+		player.player = 1
 		player.position += Vector2(50,350)
 		get_tree().get_root().add_child(player)
 		
 	get_tree().get_root().add_child(map.instance())
 	
 	game_started = true
+
+
+func _on_AddLevel_timeout():
+	game_settings.level += 1

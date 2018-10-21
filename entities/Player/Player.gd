@@ -82,11 +82,19 @@ func _physics_process(delta):
 			$Damaged.start()
 		
 func read_input():
-	move_right = Input.is_action_pressed("ui_right")
-	move_left = Input.is_action_pressed("ui_left")
-	move_up = Input.is_action_pressed("ui_up")
-	move_down = Input.is_action_pressed("ui_down")
-	fire = Input.is_action_pressed("ui_fire")
+	if player == 0:
+		move_right = Input.is_action_pressed("ui_right")
+		move_left = Input.is_action_pressed("ui_left")
+		move_up = Input.is_action_pressed("ui_up")
+		move_down = Input.is_action_pressed("ui_down")
+		fire = Input.is_action_pressed("ui_fire")
+	else:
+		move_right = Input.is_action_pressed("ui_right2")
+		move_left = Input.is_action_pressed("ui_left2")
+		move_up = Input.is_action_pressed("ui_up2")
+		move_down = Input.is_action_pressed("ui_down2")
+		fire = Input.is_action_pressed("ui_fire2")
+		
 func move(delta):
 	var direction = Vector2(0.0,0.0)
 	if move_right:
