@@ -23,21 +23,21 @@ func start_game():
 		if game_settings.player1IsCat == 0:
 			player = playerFactory.instance()
 			player.setBunny()
-			player.position += Vector2(150,150)
+			player.position += Vector2(50,150)
 		elif game_settings.player1IsCat == 1:
 			player = playerFactory.instance()
 			player.setCat()
-			player.position += Vector2(150,150)
+			player.position += Vector2(50,150)
 		get_tree().get_root().add_child(player)
 	else:
 		player = playerFactory.instance()
 		player.setBunny()
-		player.position += Vector2(150,150)
+		player.position += Vector2(50,150)
 		get_tree().get_root().add_child(player)
 		
 		player = playerFactory.instance()
 		player.setCat()
-		player.position += Vector2(150,350)
+		player.position += Vector2(50,350)
 		get_tree().get_root().add_child(player)
 		
 	get_tree().get_root().add_child(map.instance())

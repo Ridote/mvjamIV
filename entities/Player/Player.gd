@@ -68,6 +68,7 @@ func _physics_process(delta):
 	move(delta)
 	for collision in $rigid.get_colliding_bodies():
 		if(collision.get_parent().get_name().substr(0,3) == "Ass" || collision.get_parent().get_name().substr(1,4) == "Shit"):
+			print(collision.get_parent().get_name())
 			if player == 0:
 				game_settings.player1_hp -= collision.get_parent().getDamage()
 			if player == 1:

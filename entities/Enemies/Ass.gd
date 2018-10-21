@@ -19,10 +19,11 @@ func _ready():
 	
 func _physics_process(delta):
 	if !dead:
-		if $KinematicBody2D.global_position.x - 20 <= BORDE_DE_ARRIBA_DE_LA_PANTALLA:
+		if $KinematicBody2D.global_position.y - 20 <= -660:
 			goUp = false
-		elif $KinematicBody2D.global_position.x + 20 >= game_settings.width:
+		elif $KinematicBody2D.global_position.y + 20 >= 660:
 			goUp = true
+			print($KinematicBody2D.global_position.y)
 		if goUp:
 			$KinematicBody2D.move_and_collide(Vector2(1,-1)*game_settings.flying_speed*delta)
 		else:
