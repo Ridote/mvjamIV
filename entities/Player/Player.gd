@@ -77,6 +77,7 @@ func _physics_process(delta):
 			mask_save = $rigid.collision_mask
 			$rigid.collision_layer = 0
 			$rigid.collision_mask = 0
+			$AnimationPlayer.play("damaged")
 			$Damaged.start()
 		
 func read_input():
@@ -122,8 +123,6 @@ func move(delta):
 	#var realDir = $rigid.linear_velocity.normalized()
 	#$rigid.look_at($rigid.global_position + realDir)
 	#$rigid.rotation += PI/2
-	
-
 
 func _on_fire_rate_timeout():
 	fire_ready = true
@@ -158,3 +157,4 @@ func _on_VisibilityLeft_screen_exited():
 func _on_Damaged_timeout():
 	$rigid.collision_layer = layer_save
 	$rigid.collision_mask = mask_save
+	$AnimationPlayer.play("notDamaged")
