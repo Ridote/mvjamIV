@@ -11,7 +11,9 @@ func _physics_process(delta):
 		return
 	var max_ass_on_screen = (game_settings.level / 5) + 4
 	if game_settings.ass_on_screen < max_ass_on_screen:
-		pass	
+		var newAss = assFactory.instance()
+		newAss.global_position = $FocusScene.get_node("Camera2D").global_position + Vector2(400, rand_range(10,300))
+		get_tree().get_root().add_child(newAss)
 	$FocusScene.position.x += game_settings.flying_speed*delta
 	
 func start_game():
