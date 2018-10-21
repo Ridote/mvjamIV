@@ -16,6 +16,8 @@ func _ready():
 	game_settings.connect("player2_score", self, "update_player2_score")
 	game_settings.connect("level", self, "update_level")
 	
+	print(game_settings.players)
+	
 func update_player1_hp():
 	$Control/VBoxContainer/Players/P1/P1HPBar.value = game_settings.player1_hp
 

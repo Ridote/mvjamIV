@@ -18,10 +18,28 @@ func _physics_process(delta):
 	
 func start_game():
 	$MainMenu.queue_free()
-	var player = playerFactory.instance()
-	player.position += Vector2(150,150)
-	
+	var player = null
+	if game_settings.players == "Single":
+		if game_settings.player1IsCat == 0:
+			player = playerFactory.instance()
+			player.setBunny()
+			player.position += Vector2(150,150)
+		elif game_settings.player1IsCat == 1:
+			player = playerFactory.instance()
+			player.setCat()
+			player.position += Vector2(150,150)
+		get_tree().get_root().add_child(player)
+	else:
+		player = playerFactory.instance()
+		player.setBunny()
+		player.position += Vector2(150,150)
+		get_tree().get_root().add_child(player)
+		
+		player = playerFactory.instance()
+		player.setCat()
+		player.position += Vector2(150,350)
+		get_tree().get_root().add_child(player)
+		
 	get_tree().get_root().add_child(map.instance())
-	get_tree().get_root().add_child(player)
 	
 	game_started = true
