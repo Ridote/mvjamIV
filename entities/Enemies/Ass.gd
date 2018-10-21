@@ -17,13 +17,16 @@ func _ready():
 	$IsPoopTime.start()
 	game_settings.ass_on_screen += 1
 	
+func getDmg(dmg):
+	pass
+	#Imma invincible bitch!
+
 func _physics_process(delta):
 	if !dead:
 		if $KinematicBody2D.global_position.y - 20 <= -660:
 			goUp = false
 		elif $KinematicBody2D.global_position.y + 20 >= 660:
 			goUp = true
-			print($KinematicBody2D.global_position.y)
 		if goUp:
 			$KinematicBody2D.move_and_collide(Vector2(1,-1)*game_settings.flying_speed*delta)
 		else:

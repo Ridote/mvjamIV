@@ -67,12 +67,13 @@ func _process(delta):
 func _physics_process(delta):
 	move(delta)
 	for collision in $rigid.get_colliding_bodies():
-		if(collision.get_parent().get_name().substr(0,3) == "Ass" || collision.get_parent().get_name().substr(1,4) == "Shit"):
-			print(collision.get_parent().get_name())
+		if(collision.get_parent().get_name().substr(1,3) == "Ass" || collision.get_parent().get_name().substr(1,4) == "Shit"):
 			if player == 0:
-				game_settings.player1_hp -= collision.get_parent().getDamage()
+				if collision.get_parent().has_method("getDamage"):
+					game_settings.player1_hp -= collision.get_parent().getDamage()
 			if player == 1:
-				game_settings.player2_hp -= collision.get_parent().getDamage()
+				if collision.get_parent().has_method("getDamage"):
+					game_settings.player2_hp -= collision.get_parent().getDamage()
 			layer_save = $rigid.collision_layer
 			mask_save = $rigid.collision_mask
 			$rigid.collision_layer = 0
