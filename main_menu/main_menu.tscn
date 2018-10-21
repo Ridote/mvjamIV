@@ -119,15 +119,32 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Single Player" type="Button" parent="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 612.0
-margin_top = 185.0
-margin_right = 653.0
-margin_bottom = 205.0
+margin_left = 576.0
+margin_top = 173.0
+margin_right = 690.0
+margin_bottom = 217.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Single Player" type="Button" parent="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2/VBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 36.0
+margin_right = 77.0
+margin_bottom = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -144,15 +161,14 @@ flat = false
 align = 1
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Multiplayer LAN" type="Button" parent="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2"]
+[node name="Multiplayer LAN" type="Button" parent="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2/VBoxContainer"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 576.0
-margin_top = 185.0
-margin_right = 690.0
-margin_bottom = 205.0
+margin_top = 24.0
+margin_right = 114.0
+margin_bottom = 44.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -169,5 +185,28 @@ flat = false
 align = 1
 _sections_unfolded = [ "Margin", "Size Flags" ]
 
-[connection signal="pressed" from="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2/Single Player" to="." method="_on_Single_Player_pressed"]
-[connection signal="pressed" from="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2/Multiplayer LAN" to="." method="_on_Multiplayer_LAN_pressed"]
+[node name="PopupMenu" type="PopupMenu" parent="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2/VBoxContainer"]
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 25.0
+margin_top = 48.0
+margin_right = 88.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+popup_exclusive = true
+items = [ "Item 0", null, 0, false, false, 0, 0, null, "", false, "Item 1", null, 0, false, false, 1, 0, null, "", false ]
+hide_on_state_item_selection = false
+submenu_popup_delay = 0.3
+_sections_unfolded = [ "Size Flags" ]
+
+[connection signal="pressed" from="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2/VBoxContainer/Single Player" to="." method="_on_Single_Player_pressed"]
+[connection signal="pressed" from="PanelContainer/NinePatchRect/VBoxContainer/MarginContainer2/VBoxContainer/Multiplayer LAN" to="." method="_on_Multiplayer_LAN_pressed"]
