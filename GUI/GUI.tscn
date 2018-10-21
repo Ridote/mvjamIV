@@ -1,8 +1,23 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GUI/GUI.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Minecraft.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://GUI/catGUITheme.tres" type="Theme" id=3]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 19
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+_sections_unfolded = [ "default_font" ]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -108,6 +123,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = SubResource( 6 )
+_sections_unfolded = [ "Theme", "theme" ]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 anchor_left = 0.0
@@ -122,7 +139,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+[node name="Players" type="HBoxContainer" parent="Control/VBoxContainer"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -137,7 +154,8 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="P1" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer"]
+[node name="P1" type="HBoxContainer" parent="Control/VBoxContainer/Players"]
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -154,7 +172,7 @@ theme = SubResource( 4 )
 alignment = 0
 _sections_unfolded = [ "Theme", "theme" ]
 
-[node name="P1HPLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer/P1"]
+[node name="P1HPLabel" type="Label" parent="Control/VBoxContainer/Players/P1"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -172,7 +190,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="P1HPBar" type="ProgressBar" parent="Control/VBoxContainer/HBoxContainer/P1"]
+[node name="P1HPBar" type="ProgressBar" parent="Control/VBoxContainer/Players/P1"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -198,7 +216,7 @@ allow_lesser = false
 percent_visible = true
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="P1ScoreLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer/P1"]
+[node name="P1ScoreLabel" type="Label" parent="Control/VBoxContainer/Players/P1"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -218,7 +236,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="P1Score" type="Label" parent="Control/VBoxContainer/HBoxContainer/P1"]
+[node name="P1Score" type="Label" parent="Control/VBoxContainer/Players/P1"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -237,7 +255,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="VSeparator" type="VSeparator" parent="Control/VBoxContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="Control/VBoxContainer/Players"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -252,7 +270,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="P2" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer"]
+[node name="P2" type="HBoxContainer" parent="Control/VBoxContainer/Players"]
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -270,7 +289,7 @@ theme = ExtResource( 3 )
 alignment = 0
 _sections_unfolded = [ "Theme", "theme" ]
 
-[node name="P2HPLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer/P2"]
+[node name="P2HPLabel" type="Label" parent="Control/VBoxContainer/Players/P2"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -288,7 +307,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="P2HPBar" type="ProgressBar" parent="Control/VBoxContainer/HBoxContainer/P2"]
+[node name="P2HPBar" type="ProgressBar" parent="Control/VBoxContainer/Players/P2"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -314,7 +333,7 @@ allow_lesser = false
 percent_visible = true
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="P2ScoreLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer/P2"]
+[node name="P2ScoreLabel" type="Label" parent="Control/VBoxContainer/Players/P2"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -334,7 +353,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="P2Score" type="Label" parent="Control/VBoxContainer/HBoxContainer/P2"]
+[node name="P2Score" type="Label" parent="Control/VBoxContainer/Players/P2"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -342,6 +361,60 @@ anchor_bottom = 0.0
 margin_left = 625.0
 margin_right = 634.0
 margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Level" type="HBoxContainer" parent="Control/VBoxContainer"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 20.0
+margin_right = 1280.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Theme" ]
+
+[node name="LevelLabel" type="Label" parent="Control/VBoxContainer/Level"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 56.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Level:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Level" type="Label" parent="Control/VBoxContainer/Level"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 60.0
+margin_right = 71.0
+margin_bottom = 20.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

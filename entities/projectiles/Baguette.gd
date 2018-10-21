@@ -16,8 +16,9 @@ func _physics_process(delta):
 	if collision:
 		if(collision.collider.get_parent().has_method("bread_this_ass")):
 			collision.collider.get_parent().bread_this_ass(damage)
+		if(collision.collider.get_parent().has_method("getDmg")):
+			collision.collider.get_parent().getDmg(damage)
 		queue_free()
-
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

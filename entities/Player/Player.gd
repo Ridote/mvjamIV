@@ -62,6 +62,7 @@ func _process(delta):
 	
 func _physics_process(delta):
 	move(delta)
+	print($rigid.get_colliding_bodies())
 		
 func read_input():
 	move_right = Input.is_action_pressed("ui_right")

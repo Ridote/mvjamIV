@@ -12,11 +12,12 @@ func _ready():
 func _physics_process(delta):
 	var collision = $KinematicBody2D.move_and_collide(direction*speed*delta)
 	$KinematicBody2D.rotate(rot_speed*delta)
+	
 	if collision:
 		if(collision.collider.get_parent().has_method("put_some_decent_panties_on_this_ass")):
 			collision.collider.get_parent().put_some_decent_panties_on_this_ass(damage)
-
-	if collision:
+		if(collision.collider.get_parent().has_method("getDmg")):
+			collision.collider.get_parent().getDmg(damage)
 		queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():
