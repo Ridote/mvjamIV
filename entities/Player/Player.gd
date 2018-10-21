@@ -8,6 +8,11 @@ var catShip = load("res://.import/catship.png-8297108db0836cd6fae645747cfa57c3.s
 
 export var speed = 1000
 
+var player = 0
+var mask_save = 0
+var layer_save = 0
+
+
 var move_up = false
 var move_down = false
 var move_right = false
@@ -62,7 +67,17 @@ func _process(delta):
 	
 func _physics_process(delta):
 	move(delta)
-	print($rigid.get_colliding_bodies())
+	for collision in $rigid.get_colliding_bodies():
+		if(collision.get_parent().get_name().substr(0,3) == "Ass" || collision.get_parent().get_name().substr(1,4) == "Shit"):
+			if player == 0:
+				game_settings.player1_hp -= collision.get_parent().getDamage()
+			if player == 1:
+				game_settings.player2_hp -= collision.get_parent().getDamage()
+			layer_save = $rigid.collision_layer
+			mask_save = $rigid.collision_mask
+			$rigid.collision_layer = 0
+			$rigid.collision_mask = 0
+			$Damaged.start()
 		
 func read_input():
 	move_right = Input.is_action_pressed("ui_right")
@@ -139,3 +154,7 @@ func _on_VisibilityLeft_screen_exited():
 	#Top, Down, Right, Left
 	forceStop[3] = true
 	needsImpulse = true
+
+func _on_Damaged_timeout():
+	$rigid.collision_layer = layer_save
+	$rigid.collision_mask = mask_save

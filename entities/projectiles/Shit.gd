@@ -15,3 +15,6 @@ func getDmg(dmg):
 	life -= dmg
 	if life <= 0:
 		queue_free()
+
+func getDamage():
+	return game_settings.level * 3

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://graphics/sprites/airship.png" type="Texture" id=2]
@@ -60,6 +60,25 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Color", "Gravity", "Initial Velocity", "Trail", "scale_curve" ]
 
+[sub_resource type="Animation" id=4]
+
+resource_name = "damaged"
+length = 0.6
+loop = true
+step = 0.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("rigid/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.933333, 0.160784, 0.160784, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="Player" type="Node2D"]
 script = ExtResource( 1 )
 speed = 1000
@@ -75,8 +94,8 @@ physics_material_override = null
 gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
+contacts_reported = 4
+contact_monitor = true
 sleeping = false
 can_sleep = true
 linear_velocity = Vector2( 0, 0 )
@@ -86,9 +105,10 @@ angular_damp = -1.0
 _sections_unfolded = [ "Angular", "Collision", "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="rigid"]
+modulate = Color( 0.999968, 0.999602, 0.999602, 1 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 16, 16, 16, 16 )
-_sections_unfolded = [ "Region", "texture" ]
+_sections_unfolded = [ "Visibility", "texture" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="rigid"]
 build_mode = 0
@@ -160,6 +180,21 @@ autostart = false
 
 [node name="GUI" parent="." instance=ExtResource( 4 )]
 
+[node name="Damaged" type="Timer" parent="."]
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/damaged = SubResource( 4 )
+blend_times = [  ]
+
 [connection signal="screen_entered" from="rigid/PositionTop/VisibilityTop" to="." method="_on_VisibilityTop_screen_entered"]
 [connection signal="screen_exited" from="rigid/PositionTop/VisibilityTop" to="." method="_on_VisibilityTop_screen_exited"]
 [connection signal="screen_entered" from="rigid/PositionBottom/VisibilityBottom" to="." method="_on_VisibilityBottom_screen_entered"]
@@ -169,3 +204,4 @@ autostart = false
 [connection signal="screen_entered" from="rigid/PositionLeft/VisibilityLeft" to="." method="_on_VisibilityLeft_screen_entered"]
 [connection signal="screen_exited" from="rigid/PositionLeft/VisibilityLeft" to="." method="_on_VisibilityLeft_screen_exited"]
 [connection signal="timeout" from="fire_rate" to="." method="_on_fire_rate_timeout"]
+[connection signal="timeout" from="Damaged" to="." method="_on_Damaged_timeout"]

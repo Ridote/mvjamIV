@@ -62,3 +62,6 @@ func _on_IsPoopTime_timeout():
 	
 	$IsPoopTime.wait_time = abs(randf()*(max_rand_time+1+min_rand_time) - min_rand_time)+0.1
 	$IsPoopTime.start()
+
+func getDamage():
+	return game_settings.level * 5
