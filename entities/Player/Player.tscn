@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://graphics/sprites/airship.png" type="Texture" id=2]
 [ext_resource path="res://graphics/textures/fire.png" type="Texture" id=3]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Curve" id=1]
 
@@ -156,6 +157,8 @@ process_mode = 1
 wait_time = 0.2
 one_shot = false
 autostart = false
+
+[node name="GUI" parent="." instance=ExtResource( 4 )]
 
 [connection signal="screen_entered" from="rigid/PositionTop/VisibilityTop" to="." method="_on_VisibilityTop_screen_entered"]
 [connection signal="screen_exited" from="rigid/PositionTop/VisibilityTop" to="." method="_on_VisibilityTop_screen_exited"]

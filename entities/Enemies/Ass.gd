@@ -16,16 +16,18 @@ func _physics_process(delta):
 		var collision = $KinematicBody2D.move_and_collide(Vector2(1,0)*game_settings.flying_speed*delta)
 		return
 	$IsPoopTime.stop()
-func bread_this_ass(dmg = 1):
+func bread_this_ass(dmg = 1, player = 0):
 	if dead:
+		game_settings.player1_score += 5
 		return
 	HP -= dmg
 	if HP <= 0:
 		$AnimationPlayer.play("Bread")
 		dead = true
 	
-func put_some_decent_panties_on_this_ass(dmg = 1):
+func put_some_decent_panties_on_this_ass(dmg = 1, player = 0):
 	if dead:
+		game_settings.player1_score += 5
 		return
 	HP -= dmg
 	if HP <= 0:
